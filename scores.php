@@ -1,6 +1,7 @@
 <?php
 require ("_eog.php");
-//session_start();
+require ("_getTime.php");
+session_start();
 try {
   //prepare insert request
   $request = $_DB->prepare(" SELECT * FROM Score ORDER by score DESC LIMIT 5 ");

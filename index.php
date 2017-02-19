@@ -1,3 +1,6 @@
+<?php
+require ("_getTime.php");
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
