@@ -1,14 +1,6 @@
 <?php
 require_once("_db.php");
 require ("_login.php");
-//???????
-//function isLoggedIn() {
-//  if (isset($_SESSION["username"])) {
-//    return true;
-//  }
-//  return false;
-//}
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,11 +27,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   elseif (empty($pazzword)){
     echo "<h4 class='errmess'>enter a password please !</h4>";
   }else {
-//insertion des données dansla base---------------------------------------------------------------------------------
+    //insertion des données dansla base---------------------------------------------------------------------------------
     try {
       $request = $_DB->prepare("INSERT INTO User (username, email, password) VALUES (:username, :email, :password)");
       $request->execute(array("username" => $uzername, "email" => $zemail, "password" => $pazzword));
-// redirection vers la page game si les données sont dans la base---------------------------------------------------
+      // redirection vers la page game si les données sont dans la base---------------------------------------------------
       header("location: /blank/php/Boombox/game.php");
     } catch (PDOException $e) {
       echo "Error while writing datas to db " . $e->getMessage();

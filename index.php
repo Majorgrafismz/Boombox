@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>BLKRZ 2.02</title>
-  <link rel="stylesheet" href="assets/css/boomstyle2.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="assets/css/<?php echo $link; ?>.css" />
 </head>
 <body>
   <?php

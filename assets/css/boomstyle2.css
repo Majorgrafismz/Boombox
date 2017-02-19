@@ -5,7 +5,6 @@ hmtl, body {
 body {
   font-family: arial, sans-serif;
   background-color: white url('../images/blkrz_bg.png') no-repeat fixed center;
-  /*background-image: url(./assets/images/burnt-wood-texture.jpg);*/
   color: mediumturquoise;
 }
 /*--------login form*/
@@ -224,21 +223,21 @@ h4 {
 }
 
 #pad_d, #pad_f, #pad_g, #pad_h {
-/*border: 3px solid darkred;*/
-background-color: red;
+  /*border: 3px solid darkred;*/
+  background-color: red;
 }
 
 #pad_o, #pad_p, #pad_q, #pad_s {
-/*border: 3px solid #ff7700;*/
-background-color: #ab2200;
+  /*border: 3px solid #ff7700;*/
+  background-color: #ab2200;
 }
 #pad_t, #pad_y, #pad_u, #pad_i {
-/*border: 3px solid yellow;*/
-background-color: #ff6600;
+  /*border: 3px solid yellow;*/
+  background-color: #ff6600;
 }
 #pad_a, #pad_z, #pad_e, #pad_r {
-/*border: 3px solid white;*/
-background-color: yellow;
+  /*border: 3px solid white;*/
+  background-color: yellow;
 }
 
 .played {

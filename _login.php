@@ -15,34 +15,34 @@ if ($_SERVER["REQUEST_METHOD"]== "POST"){
       echo "Error while getting datas from db " . $e->getMessage();
       die();
     }
-      if ($username == $users["username"]
-      && $email== $users["email"]
-      && $password == $users["password"]) {
-        $_SESSION["username"] = $_POST["username"];
-        $_SESSION["email"] = $_POST["email"];
-        $_SESSION["password"] = $_POST["password"];
+    if ($username == $users["username"]
+    && $email== $users["email"]
+    && $password == $users["password"]) {
+      $_SESSION["username"] = $_POST["username"];
+      $_SESSION["email"] = $_POST["email"];
+      $_SESSION["password"] = $_POST["password"];
 
-        header("location: /php/Boombox/game.php");
-        }
-      else if($username != $users["username"]
-      && $password != $users["password"]
-      && $email != $users["email"]){
-        echo "<h4>CHECK YOUR INFOS...</h4>";
-        echo "<h4 id='sulink'>...OR SIGN UP HERE </h4>";
-        //<a  href='signup.php'></a>
-        }
-      else if ($username != $users["username"]){
-        echo "<h4>wrong username...CHECK YOUR INFOS!</h4>";
-      }
-      else if ($password != $users["password"]){
-        echo "<h4>wrong password...CHECK YOUR INFOS!</h4>";
-      }
-      else if ($email != $users["email"]){
-        echo "<h4>wrong email...CHECK YOUR INFOS!</h4>";
-      }
-      else{
-        echo "<h4>YOU MUST IDENTIFY YOURSELF TO PLAY...</h4>";
-      }
+      header("location: /php/Boombox/game.php");
+    }
+    else if($username != $users["username"]
+    && $password != $users["password"]
+    && $email != $users["email"]){
+      echo "<h4>CHECK YOUR INFOS...</h4>";
+      echo "<h4 id='sulink'>...OR SIGN UP HERE </h4>";
+      //<a  href='signup.php'></a>
+    }
+    else if ($username != $users["username"]){
+      echo "<h4>wrong username...CHECK YOUR INFOS!</h4>";
+    }
+    else if ($password != $users["password"]){
+      echo "<h4>wrong password...CHECK YOUR INFOS!</h4>";
+    }
+    else if ($email != $users["email"]){
+      echo "<h4>wrong email...CHECK YOUR INFOS!</h4>";
+    }
+    else{
+      echo "<h4>YOU MUST IDENTIFY YOURSELF TO PLAY...</h4>";
+    }
     //}
   }
 }

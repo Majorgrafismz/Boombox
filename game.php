@@ -7,7 +7,6 @@ require ("_getTime.php");
 if (isset($_SESSION["username"]) && isset($_SESSION["email"]) && isset($_SESSION["password"])) {
   echo "<h5><span id='gamehello'>WELCOME ". $_SESSION["username"]. " !</span></h5>";
   echo "<a id='signoutlink' href='deconx.php'>SIGN OUT</a>";
-
 }else{
   header("location: /php/Boombox/signup.php");
 }
@@ -18,8 +17,7 @@ if (isset($_SESSION["username"]) && isset($_SESSION["email"]) && isset($_SESSION
   <meta charset="utf-8">
   <title>GAME</title>
   <link href="assets/vendor/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="assets/css/boomstyle.css" rel="stylesheet" type="text/css">
-  <!-- <link rel="stylesheet" type="text/css" href="assets/css/<?php //echo $link; ?>.css" /> -->
+  <link rel="stylesheet" type="text/css" href="assets/css/<?php echo $link; ?>.css" />
   <script type="text/javascript">
   //----------ecoute et detection d'un event key down et appel d'une function play + ajout d'une nouvelle classe-----------------------------------
   window.addEventListener("keydown", function(event) {
@@ -108,12 +106,6 @@ if (isset($_SESSION["username"]) && isset($_SESSION["email"]) && isset($_SESSION
 </body>
 
 <script type="text/javascript">
-// switch theme button
-  //
-  // document.getElementById("tmswitch").onclick = function (){
-  //   document.getElementById("honolulu_css").href="assets/css/boomstyle.css";
-  // };
-
 // création d'un tableau réunissant les keyCodes utilisés-----------------------
 var kcodz = [
   "65",
@@ -133,7 +125,6 @@ var kcodz = [
   "71",
   "72"
 ];
-
 var playlist = [];
 document.getElementById("pbutt").addEventListener("click", function(){
   var z = Math.floor(Math.random() * kcodz.length);
@@ -149,8 +140,6 @@ document.getElementById("pbutt").addEventListener("click", function(){
     };
     y.play();
   }
-
-
 });
 </script>
 </html>
