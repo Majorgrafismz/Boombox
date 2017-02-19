@@ -1,0 +1,351 @@
+hmtl, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+  background-color: #090909;
+  /*background-image: url(./assets/images/burnt-wood-texture.jpg);*/
+  color: #ff00ee;
+}
+/*--------login form*/
+.formlogin {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  background-color: purple;
+  border: 0;
+  border-radius: 5px;
+}
+
+#subm {
+  color: purple;
+  font-weight: bold;
+  background-color: #ff00ee;
+  cursor: pointer;
+  border: 0;
+}
+/*---------signup form*/
+.formu {
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 0;
+  width: 40%;
+  height: 60%;
+  color: rgba(155,155,155,0.2);
+  font-size: 1.2em;
+  text-align: center;
+  border: 3px groove purple;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3px;
+}
+.formsign {
+  margin-top: 20px;
+}
+.nptsign {
+  top: 20px;
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  font-weight: normal;
+  color: purple;
+  background-color: transparent;
+  border: 2px groove purple;
+  border-radius: 10px;
+}
+
+#zubm {
+  color: #aaaaaa;
+  font-weight: bold;
+  background-color: purple;
+  cursor: pointer;
+
+}
+/*--------index main title*/
+#ndxtitle {
+  font-size: 9em;
+  font-weight: bold;
+  text-align: center;
+  color: #090909;
+  text-shadow: 5px 0px purple;
+  padding: 10px 10px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*---index blah blah------------*/
+p {
+  color: #090909;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  background-color: purple;
+}
+
+/*game page blah blah*/
+#pstyle {
+  color: #333333;
+  font-size: 0.8em;
+  font-style: italic;
+  text-align: center;
+  background-color: Transparent;
+}
+
+h3 {
+  color: #000000;
+  font-size: 1.6em;
+  font-weight: bolder;
+  text-shadow: 2px 1px #333333;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+h5 {
+  margin: 0;
+}
+/*links on index page*/
+.ndxlink {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  font-size: 40px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.ndxlink a {
+  display: inline-block;
+  width: 100%;
+  color: purple;
+  /*list-style: none;*/
+  text-align: center;
+  text-decoration: none;
+  margin: 20px;
+}
+
+a:hover {
+  color: #ff00ee;
+}
+/*validations error mess*/
+h4 {
+  color: #ff00ee;
+  font-size: 2em;
+  text-shadow: 1px 0 purple;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.errmess {
+  display: flex;
+  position:relative;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: #ff00ee;
+  margin-top: 10px;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.mainsu {
+  display: block;
+  position: relative;
+  top: 45px;
+  left: 0;
+  width: 990px;
+  height: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* beatbox design*/
+.mainbox {
+  width: 990px;
+  height: 600px;
+  border: 4px solid #202020;
+  background: black;
+  /*url('../images/zeart_2.jpg') no-repeat fixed center;*/
+  margin: auto;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.mainpad {
+  display: grid;
+  position: relative;
+  top: 5px;
+  width: 690px;
+  height: 400px;
+  margin: auto;
+  justify-content: center;
+  /*background-image: linear-gradient(36deg, black, silver, black);*/
+  background-color: black;
+
+  border: 2px groove rgba(156,156,156,0.2);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.pad {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 75px;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  border: 5px groove rgba(156, 156, 156, 0.3) ;
+  margin: 10px;
+  background-color: #151515;
+  border-radius: 9px;
+  -webkit-transition: all 0.05s ;
+  -moz-transition: all 0.05s linear;
+  transition:all 0.05s linear;
+}
+
+.played {
+  transform: scale(1.07);
+  background-color: purple;
+  border: 5px groove magenta;
+  box-shadow: 0 0 20px purple;
+}
+
+kbd {
+  font-family: sans-serif;
+  font-size: 1.7em;
+}
+
+/*
+#pad_d, #pad_f, #pad_g, #pad_h {
+border: 3px solid darkred;
+background-color: red;
+}
+
+#pad_o, #pad_p, #pad_q, #pad_s {
+border: 3px solid #ff7700;
+background-color: #ab2200;
+}
+#pad_t, #pad_y, #pad_u, #pad_i {
+border: 3px solid yellow;
+background-color: #ff6600;
+}
+#pad_a, #pad_z, #pad_e, #pad_r {
+border: 3px solid white;
+background-color: yellow;
+}*/
+
+
+.butt {
+  display: inline-block;
+
+}
+
+#pbutt {
+  display: block;
+  position: relative;
+  top: -50px;
+  left: 910px;
+  width: 70px;
+  height: 40px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+  background-color: purple;
+  border: 3px groove rgba(156, 156, 156, 0.3);
+  border-radius: 7%;
+  text-shadow: 1.2px 1px #ff00ee;
+  margin: 0;
+  z-index: 7;
+}
+
+#signoutlink {
+  display: flex;
+  position: relative;
+  top: -90px;
+  left: 1032px;
+  width: 90px;
+  color: #ff00ee;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 2px;
+  justify-content: center;
+}
+
+
+#gamehello {
+  position: relative;
+  top: -67px;
+  left: 69px;
+  font-size: 1.11em;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 4px;
+  text-align: center;
+}
+/*score div*/
+.scosco{
+  display: inline-flex;
+  position: relative;
+  left: 400px;
+  width: 40%;
+  color: purple;
+  font-weight: bold;
+  justify-content: center;
+  z-index: 10;
+  margin: 5px;
+}
+.showScore{
+  display: block;
+  width: 180px;
+  height: 30px;
+  background-color: purple;
+  margin: auto;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  z-index: 11;
+}
+
+#savesc {
+  color: purple;
+  background-color: #ff00ee;
+  border: 0;
+}
+
+#scorin {
+  color: #ffffff;
+}
+/*end of beatbox design*/
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  color: purple;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+}

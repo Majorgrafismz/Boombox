@@ -1,0 +1,280 @@
+<?php
+require("_login.php");
+require ("soundz.php");
+session_start ();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GAME</title>
+  <link rel="stylesheet" href="assets/css/boomstyle.css" type="text/css">
+  <script type="text/javascript">
+  // -------link keyboard keys to sounds my first method yeah ! a lil' bit messy !-----------
+  // a key
+  /*addEventListener("keydown", function(event) {
+  if (event.keyCode == 65)
+  document.getElementById('snd1').play();
+  //document.getElementById('pad_a').style.background = "hotpink";
+});*/
+//addEventListener("keyup", function(event) {
+//  if (event.keyCode == 65)
+//document.getElementById('snd1').pause();
+//document.getElementById('snd1').currentTime=0;
+//document.getElementById('pad_a').style.background = "";
+
+//  });
+// z key
+/*addEventListener("keydown", function(event) {
+if (event.keyCode == 90)
+document.getElementById('snd2').play();
+});
+// e key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 69)
+document.getElementById('snd3').play();
+});
+// r key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 82)
+document.getElementById('snd4').play();
+});
+// t key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 84)
+document.getElementById('snd5').play();
+//document.getElementById('pad_t').style.background = "red";
+});
+// y key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 89)
+document.getElementById('snd6').play();
+});
+// u key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 85)
+document.getElementById('snd7').play();
+});
+// i key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 73)
+document.getElementById('snd8').play();
+});
+// O key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 79)
+document.getElementById('snd9').play();
+});
+// p key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 80)
+document.getElementById('snd10').play();
+});
+// q key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 81)
+document.getElementById('snd11').play();
+});
+// s key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 83)
+document.getElementById('snd12').play();
+});
+// d key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 68)
+document.getElementById('snd13').play();
+});
+// f key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 70)
+document.getElementById('snd14').play();
+});
+// g key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 71)
+document.getElementById('snd15').play();
+});
+// h key
+addEventListener("keydown", function(event) {
+if (event.keyCode == 72)
+document.getElementById('snd16').play();
+});*/
+// spacebar key & play button
+//addEventListener("keydown", function(event) {
+//if (event.keyCode == 32)
+//document.getElementById('snd16').play();
+//});
+//----------a clearer method------------------------------------
+window.addEventListener("keydown", function(event) {
+  const audio = document.querySelector(`audio[data-touche="${event.keyCode}"]`);
+  if(!audio) return;
+  audio.play();
+})
+//<?php
+/*if (audio) {
+function randomize(audio) {
+$random = rand(0,15);
+return $random;
+}
+for (i=$random; i < count($random); i++) {
+$randomseq += $random;
+
+}
+
+
+*/
+//?>
+
+/*function randomize(){
+var randseq="";
+var keyposs="azertyuiopqsdfgh";
+
+for (var i = 0; i<= keyposs.length; i++){
+randseq += keyposs.charAt(Math.floor(Math.random() * keyposs.length));
+return randseq;
+}
+}*/
+
+
+/*var sounds = [];
+
+// Return the full list of URLs in random order
+function getSounds() {
+return [
+"assets/audio/Kick 007 Noisy.wav",
+"assets/audio/Kick 004 Blam.wav",
+"assets/audio/HiHat Closed 008 Classic.wav",
+"assets/audio/HiHat Open 001.wav",
+"assets/audio/Cymbal Ride 001 Smooth.wav",
+"assets/audio/808-clave-09.wav",
+"assets/audio/Snare 007.wav",
+"assets/audio/Clap 015.wav",
+"assets/audio/Shaker 001.wav",
+"assets/audio/808-tom-30.wav",
+"assets/audio/Kick 006 Lexy.wav",
+"assets/audio/808_BassLex.wav",
+"assets/audio/Bell 001 Revved.wav",
+"assets/audio/Orchestra Hit 001 Revved.wav",
+"assets/audio/Timpani 001 Revved.wav",
+"assets/audio/Snare 001.wav",
+].sort(function () {
+// http://stackoverflow.com/a/18650169/283078
+return (.5 - Math.random());
+});
+}
+
+// Play the next sound
+function playSound() {
+if (!sounds.length) {
+// Get the list of sounds (random order)
+sounds = getSounds();
+}
+
+// Pops a URL every time, ensuring all are played exactly once
+$("#element").html(
+'<embed src="' + sounds.pop() +
+'" hidden="true" autostart="true" />'
+);
+
+// Once all the URLs have been popped, the process starts again
+}
+$('#pbutt').click(playSound);
+*/
+//------- other way to do it ----
+
+
+//function randomSound() {
+   var sounds = new Array (
+    "assets/audio/Kick 007 Noisy.wav",
+    "assets/audio/Kick 004 Blam.wav",
+    "assets/audio/HiHat Closed 008 Classic.wav",
+    "assets/audio/HiHat Open 001.wav",
+    "assets/audio/Cymbal Ride 001 Smooth.wav",
+    "assets/audio/808-clave-09.wav",
+    "assets/audio/Snare 007.wav",
+    "assets/audio/Clap 015.wav",
+    "assets/audio/Shaker 001.wav",
+    "assets/audio/808-tom-30.wav",
+    "assets/audio/Kick 006 Lexy.wav",
+    "assets/audio/808_BassLex.wav",
+    "assets/audio/Bell 001 Revved.wav",
+    "assets/audio/Orchestra Hit 001 Revved.wav",
+    "assets/audio/Timpani 001 Revved.wav",
+    "assets/audio/Snare 001.wav"
+  );
+var_dump(sounds) ;
+//  for (var i = 0; i < sounds.length; i++);
+  //  var z = Math.floor(Math.random() * sounds[i]);
+    //console.log(z);
+      //for (var j = 0; j < z; j++)
+//}
+       //function play(){
+        // var p = z+j;
+        // p.randomSound();
+       //};
+
+  //function randomSound() {
+  //    var x = Math.floor((Math.random() * 16) + 1).toString(36);
+
+      //document.getElementById("demo").innerHTML = x;
+//  }
+
+  /*$.("#pbutt").html(
+    "<embed src=\""+Math.floor(Math.random()*(sounds.length+1))+"\" autostart=\"true\" />"
+  );*/
+
+
+
+
+//-------------- play function for play button----------------
+ //function play(){
+//var randseq = document.getElementById("snd9");//placer la sequence random
+//    var randseq="";
+//  var keyposs="azertyuiopqsdfgh";
+//
+//  for (var i = 0; i<= keyposs.length; i++){
+//    randseq += keyposs.charAt(Math.floor(Math.random() * keyposs.length));
+//  return randseq;
+//}
+   //randseq.play();
+//}
+
+</script>
+</head>
+<body>
+
+  <div class="mainbox">
+    <h3 class="brand">- MKR 808 -</h3>
+    <p class="brand" id="pstyle">a Cosmos High Technologies project</p>
+    <div class="mainpad">
+      <div data-touche= "65" class="pad" id="pad_a">KICK 1</div>
+      <div data-touche= "90" class="pad" id="pad_z">KICK 2</div>
+      <div data-touche= "69" class="pad" id="pad_e">HI HAT</div>
+      <div data-touche= "82" class="pad" id="pad_r">OP HAT</div><br>
+      <div data-touche= "84" class="pad" id="pad_t">RIDE</div>
+      <div data-touche= "89" class="pad" id="pad_y">CLAVE</div>
+      <div data-touche= "85" class="pad" id="pad_u">SNARE 1</div>
+      <div data-touche= "73" class="pad" id="pad_i">CLAP</div><br>
+      <div data-touche= "79" class="pad" id="pad_o">SHAKER</div>
+      <div data-touche= "80" class="pad" id="pad_p">TOM</div>
+      <div data-touche= "81" class="pad" id="pad_q">KICK 3</div>
+      <div data-touche= "83" class="pad" id="pad_s">BASS</div><br>
+      <div data-touche= "68" class="pad" id="pad_d">BELL</div>
+      <div data-touche= "70" class="pad" id="pad_f">ORC HIT</div>
+      <div data-touche= "71" class="pad" id="pad_g">TIMPANI</div>
+      <div data-touche= "72" class="pad" id="pad_h">SNARE 2</div><br>
+    </div>
+  </div>
+  <div class="butt">
+  <!--  <p> <button id="pbutt"onclick="javascript:randomSound()">Try it</button> </p>-->
+    <input id="pbutt" type="button" value="PLAY"  onclick="play()">
+    <!--<div id="element"></div>-->
+  </div>
+</div>
+</div>
+<!--<footer>
+- MKR 808 is a musical project ingeneered by LAWD for Cosmos High Tecnologies. -
+</footer>-->
+</body>
+</html>
